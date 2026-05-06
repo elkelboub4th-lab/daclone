@@ -26,9 +26,6 @@ jobs:
 
       - name: Run scraper
         run: python main.py
-        env:
-          # Optional: override settings via env vars if your script supports it
-          # WAIT_TIME: '0.5'
 
       - name: Upload results
         uses: actions/upload-artifact@v4
