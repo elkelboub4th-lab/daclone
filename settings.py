@@ -1,17 +1,15 @@
-"""
-NOTE: please read README.md  carefully before proceeding.
-"""
-
+# settings.py
 API_URL = "https://api.ouedkniss.com/graphql"
 HEADER = {
     "Content-Type": "application/json",
-    "User-Agent": "Mozilla/5.0"
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "application/json, text/plain, */*",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Origin": "https://www.ouedkniss.com",
+    "Referer": "https://www.ouedkniss.com/"
 }
-COUNT= 60 # Number of items per page (can't be increased that's the maximum for one page), can be decreased
-TRIES=3 # Retry attempts for failed requests
-WAIT_TIME_RETRY=3 # seconds we wait between retries
-WAIT_TIME= 0.2 # seconds between requests (recommended: 0.2 to avoid overwhelming API)
-
-# NOTE: you can change if you're intrested in all the features got from the API or only a portion of it
-TYPE= "MINI" # you can change it to "ALL" / or create new set of features you're intrested in
-# GO to process.py and utils.py if you want specific features, change it at your own responsibility
+COUNT = 60
+TRIES = 5  # Increase retries
+WAIT_TIME_RETRY = 5
+WAIT_TIME = 1.0  # ⬅️ Increase from 0.2 to 1.0 seconds
+TYPE = "MINI"
